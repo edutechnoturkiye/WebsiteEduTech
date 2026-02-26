@@ -1,0 +1,11 @@
+.ImportantText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: Flight 6s ease-in-out infinite;
+}
+
+@keyframes Flight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1vh); }
+}

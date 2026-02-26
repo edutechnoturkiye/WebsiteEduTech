@@ -1,0 +1,27 @@
+:root {
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --darker-color: #212529;
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--darker-color);
+    transition: flex-direction 0.5s, align-items 0.5s;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}

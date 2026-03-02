@@ -5,6 +5,11 @@
   animation: Flight 6s ease-in-out infinite;
 }
 
+.para {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: medium;
+}
+
 @keyframes Flight {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-1vh); }

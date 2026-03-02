@@ -12,5 +12,5 @@
 
 @keyframes Flight {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1vh); }
+  50% { transform: translateY(-0.5vh); }
 }

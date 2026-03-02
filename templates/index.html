@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="../static/css/alignment.css">
     <link rel="stylesheet" type="text/css" href="../static/css/pagetype1.css">
     <link rel="stylesheet" type="text/css" href="../static/css/texts1.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/modals1.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>EduTechno</title>
@@ -20,16 +23,33 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <nav class="navbar">
-      <button class="btn1" id="navbtn1">Ana Sayfa</button>
-      <button class="btn1" id="navbtn2">Hakkımızda</button>
-      <button class="btn1" id="navbtn3">Yaptığımız Projeler</button>
-      <button class="btn1" id="navbtn4">İletişim</button>
+      <button class="btn1 open" id="navbtn1">Hakkımızda</button>
+      <button class="btn1" id="navbtn2">Yaptığımız Projeler</button>
+      <button class="btn1" id="navbtn3">İletişim</button>
     </nav>
     <h1 class="line-center ImportantText">Hoşgeldiniz!</h1>
     <div>
       <p class="para line-center">Selam</p>
     </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="../static/js/buttons1-10.js" async></script>
-    <script src="../static/js/startanimpage1.js" async></script>
+    <script src="../static/js/animspage1.js" async></script>
+
+<div class="modal-frame">
+  <div class="modal">
+    <div class="modal-inset">
+      <div class="close"><i class="fas fa-times"></i></div>
+
+      <div class="modal-body">
+        <h3>Such Modal, Much Animate!</h3>
+        <p style="color: black;">Nothing groundbreaking, but I hope you enjoyed the animation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay"></div>
   </body>
 </html>

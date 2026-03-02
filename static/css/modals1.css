@@ -85,6 +85,7 @@
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
   border-radius: 25px;
+  overflow-y: auto;
 }
 
 

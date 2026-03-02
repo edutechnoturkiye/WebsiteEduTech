@@ -23,23 +23,25 @@ window.addEventListener("load", function () {
 
 $(function() {
 
-  var $modal = $('.modal-frame');
   var $overlay = $('.modal-overlay');
 
-  $modal.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function() {
-    if ($modal.hasClass('state-leave')) {
-      $modal.removeClass('state-leave');
-    }
+  $('.open').on('click', function() {
+    var modalID = $(this).data('modal');
+    var $modal = $('#' + modalID);
+
+    $overlay.addClass('state-show');
+    $modal.removeClass('state-leave').addClass('state-appear');
   });
 
   $('.close').on('click', function() {
+    var $modal = $(this).closest('.modal-frame');
+
     $overlay.removeClass('state-show');
     $modal.removeClass('state-appear').addClass('state-leave');
   });
 
-  $('.open').on('click', function() {
-    $overlay.addClass('state-show');
-    $modal.removeClass('state-leave').addClass('state-appear');
+  $('.modal-frame').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function() {
+    $(this).removeClass('state-leave');
   });
 
 });

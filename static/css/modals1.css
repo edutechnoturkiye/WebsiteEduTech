@@ -84,6 +84,7 @@
   box-shadow: 2px 2px 8px 1px rgba(0,0,0,.2);
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
+  border-radius: 25px;
 }
 
 
@@ -96,6 +97,7 @@
   padding: 10px;
   opacity: .4;
   transition: opacity .2s ease;
+  color: black;
 }
 
 .modal-inset .close:hover {

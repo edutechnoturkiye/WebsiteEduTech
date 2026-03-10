@@ -42,8 +42,19 @@ html, body {
 
 .container.line-center {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     left: 50% + 7.5vw;
+    transform: translateX(-50% - 7.5vw);
+}
+
+.container.Important {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    left: 50% + 7.5vw;
+    width: 100vw;
+    height: 15vh;
     transform: translateX(-50% - 7.5vw);
 }
 

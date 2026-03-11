@@ -1,9 +1,14 @@
 :root {
-  --light-color: #ffffff;
-  --dark-color: #456d3d;
-  --darker-color: #255313;
-  --lighter-bg: #4c6b43;
-  --normal-bg: #46613e;
+  --light-color: #e6f1ec;      /* soft readable text */
+  
+  --dark-color: #2c5f4a;       /* primary eco green */
+  --darker-color: #1e3f34;     /* darker UI surfaces */
+
+  --accent-color: #3ea38a;     /* muted teal highlight */
+  --accent-warm: #d8b75c;      /* subtle solar energy highlight */
+
+  --lighter-bg: #0f1a17;       /* main page background */
+  --normal-bg: #081311;        /* deeper gradient end */
 }
 
 html, body {
@@ -14,71 +19,93 @@ html, body {
   padding: 0;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  background-image: linear-gradient(to bottom, var(--normal-bg), var(--lighter-bg));
+  font-size: 1.4815vh;
+  line-height: 2.037vh;
+  background-image: linear-gradient(
+    to bottom,
+    var(--lighter-bg),
+    var(--normal-bg)
+  );
   color: var(--light-color);
 }
 
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: var(--darker-color);
     border-radius: 8px;
-    border: 4px solid var(--dark-color);
+    background-color: #142824;
+    border: 2px solid var(--dark-color);
     transition: flex-direction 0.5s, align-items 0.5s;
-    padding: 20px;
-    gap: 20px;
+    padding: 3.7037vh;
+    gap: 1.8519vh;
 }
 
 .logo {
     width: 5vw;
     height: 10vh;
-    transition: transform 1s, width 0.5s, height 0.5s;
+    transition: transform 1s, width 0.5s, height 0.5s, opacity 0.5s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
+    opacity: 0.2;
+    animation: infinite rotation 2s ease-in-out;
 }
 
 .logo:hover {
     width: 7vw;
     height: 14vh;
+    opacity: 1;
     transform: rotate(360deg);
+    animation-play-state: running;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
 }
 
 .stuck {
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 39;
 }
 
 .container {
     width: 15vw;
     height: 10vh;
-    background-color: var(--dark-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light-color);
+    background-color: #19342c;
+    border: 2px solid var(--dark-color);
     border-radius: 8px;
-    border: 4px solid var(--darker-color);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
 }
 
 .container.line-center {
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 4.6296vh;
+    margin-bottom: 4.6296vh;
     left: 50% + 7.5vw;
     transform: translateX(-50% - 7.5vw);
 }
 
 .container.Important {
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 1.8519vh;
+    margin-bottom: 4.6296vh;
     left: 50% + 7.5vw;
     width: 100vw;
     height: 15vh;
     transform: translateX(-50% - 7.5vw);
+    background-color: #19342c;
+    color: var(--light-color);
+    text-shadow: 3px 3px 0px var(--normal-bg);
 }
 
 @media (max-width: 600px) {
@@ -91,19 +118,19 @@ html, body {
 .btn1 {
     background-color: var(--dark-color);
     color: var(--light-color);
+    border: 0.5px solid var(--darker-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    border: 2px solid var(--darker-color);
     transition: background-color 0.3s, border-color 0.3s, transform 0.5s, font-size 0.05s;
     transition-timing-function: cubic-bezier(0.9, 0, 0, 1);
 }
 
 .btn1:hover {
-    background-color: var(--darker-color);
-    border-color: var(--dark-color);
+    border: 0.5px solid var(--accent-color);
+    background-color: var(--lighter-bg);
     transform: translateY(0.4vh);
 }
 

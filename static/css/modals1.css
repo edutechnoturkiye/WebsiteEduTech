@@ -45,7 +45,7 @@
 }
 
 .modal-frame.state-appear .modal-inset {
-  animation: modalComeIn .25s ease forwards;
+  animation: modalComeIn .5s cubic-bezier(0, 0, 0, 0.75) forwards;
   visibility: visible;
 }
 
@@ -59,14 +59,14 @@
 }
 
 .modal-frame.state-leave .modal-inset {
-  animation: modalHeadOut .35s ease .1s forwards;
+  animation: modalHeadOut .35s cubic-bezier(0, 0, 0, 0.7) .2s forwards;
   visibility: visible;
 }
 
 .modal-frame.state-leave .modal-body {
   opacity: 0;
-  transition: all .35s ease;
-  transform: translateY(25px);
+  transition: all .35s cubic-bezier(0, 0, 0, 0.7);
+  transform: translateY(2.3148vh);
 }
 
 .modal {
@@ -76,15 +76,15 @@
 
 .modal-inset {
   position: relative;
-  padding: 60px;
+  padding: 5.5556vh;
   background-color: rgb(255, 255, 255);
-  min-width: 320px;
-  min-height: 126px;
+  min-width: 29.6296vh;
+  min-height: 11.6667vh;
   margin: auto;
-  box-shadow: 2px 2px 8px 1px rgba(0,0,0,.2);
+  box-shadow: 2.0002px 0.1852vh 0.7407vh 0.0926vh rgba(0,0,0,.2);
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
-  border-radius: 25px;
+  border-radius: 2.3148vh;
   overflow-y: auto;
 }
 
@@ -93,9 +93,9 @@
   display: block;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
+  top: 0.9259vh;
+  right: 0.9259vh;
+  padding: 0.9259vh;
   opacity: .4;
   transition: opacity .2s ease;
   color: black;
@@ -109,23 +109,23 @@
   margin: auto;
   opacity: 0;
   transform: translateY(0) scale(.8, .8);
-  transition: opacity .25s .1s ease, transform .25s .1s ease;
+  transition: opacity .25s .1s cubic-bezier(0, 0, 0, 0.7), transform .25s .1s cubic-bezier(0, 0, 0, 0.7);
 }
 
 .modal-body h3 {
   font-weight: 700;
-  padding-bottom: 22px;
+  padding-bottom: 2.037vh;
   display: block;
   color: #F2594B;
   text-align: center;
 }
 
 .modal-body p {
-  padding-bottom: 20px;
+  padding-bottom: 1.8519vh;
 }
 
 .modal-body .ps {
-  font-size: 12px;
+  font-size: 1.1111vh;
   opacity: .3;
 }
 
@@ -134,7 +134,7 @@
   0% {
     visibility: hidden;
     opacity: 0;
-    transform: scale(.8, .8);
+    transform: scale(.01, .01);
   }
   65% {
     transform: scale(1.03, 1.03);
@@ -155,6 +155,6 @@
   100% {
     visibility: hidden;
     opacity: 0;
-    transform: translateY(35px) scale(.97, .97);
+    transform: translateY(3.2407vh) scale(.8, .8);
   }
 }

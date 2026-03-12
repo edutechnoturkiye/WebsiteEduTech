@@ -51,11 +51,23 @@ html, body {
 }
 
 .logo:hover {
-    width: 7vw;
-    height: 14vh;
+    width: 7.5vw;
+    height: 7.5vw;
     opacity: 1;
     transform: rotate(360deg);
     animation-play-state: running;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .logo:hover {
+    width: 14vw;
+    height: 14vw;
+  }
 }
 
 @keyframes rotation {

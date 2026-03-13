@@ -113,15 +113,20 @@
 }
 
 .modal-body h3 {
-  font-weight: 700;
+  font-weight: bolder;
   padding-bottom: 2.037vh;
   display: block;
-  color: #F2594B;
+  color: rgb(40, 40, 139);
   text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 170%;
 }
 
 .modal-body p {
   padding-bottom: 1.8519vh;
+  color: rgb(73, 71, 160);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 125%;
 }
 
 .modal-body .ps {

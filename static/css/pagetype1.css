@@ -50,19 +50,31 @@ body {
 }
 
 .navbar .settings {
-    width: 2.5vw;
-    height: 2.5vw;
-    right: 5%;
+    width: clamp(30px, 2.5vw, 50px);
+    height: clamp(30px, 2.5vw, 50px);
+
     position: absolute;
+    right: 5%;
+    top: 7.125%;
+    transform: translateY(-50%);
+
+    background-image: url("../images/settings.png");
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    border: none;
+    cursor: pointer;
+
+    pointer-events: auto;
+
     transition: transform 0.5s, height 0.5s, box-shadow 0.9s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
-    pointer-events: visible;
-    cursor: pointer
 }
 
 .navbar .settings:hover {
-    transform: rotate(360deg) scale(1.5);
-    animation-play-state: running;
+    transform: translateY(-50%) rotate(360deg) scale(1.5);
 }
 
 .logo {

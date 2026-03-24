@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <a class="open Animation" data-modal="modal1" href="#"><img src="static/images/favicon.png" alt="EduTechno Logo" class="logo stuck"></a>
+    <a class="open" data-modal="modal1" href="#"><img src="static/images/favicon.png" alt="EduTechno Logo" class="logo stuck"></a>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -26,7 +26,7 @@
       <button class="btn1 open" data-modal="modal1" id="AboutUs">Deyim</button>
       <button class="btn1 open" data-modal="modal2">Yaptığımız Projeler</button>
       <button class="btn1 open" data-modal="modal3">İletişim</button>
-      <img src="static/images/settings.png" alt="Settings Icon" class="settings Animation">
+      <button aria-label="Settings" class="settings" id="settings"></button>
     </nav>
     <div class="container Important"> 
       <h1 class="line-center ImportantText">Hoşgeldiniz!</h1>
@@ -38,19 +38,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="static/js/animspage1.js" defer></script>
-
-<div class="modal-frame" id="settings-modal">
-  <div class="modal">
-    <div class="modal-inset">
-      <div class="close"><i class="fa-solid fa-xmark"></i></div>
-
-      <div class="modal-body">
-        <h3>Ayarlar</h3>
-        <button></button>
-      </div>
-    </div>
-  </div>
-</div>
+    <script src="static/js/buttons1-10.js" defer></script>
 
 <div class="modal-frame" id="modal1">
   <div class="modal">
@@ -64,6 +52,7 @@
     </div>
   </div>
 </div>
+
 <div class="modal-frame" id="modal2">
   <div class="modal">
     <div class="modal-inset">

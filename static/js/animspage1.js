@@ -3,21 +3,32 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.style.scale = '1';
   document.body.style.transform = 'translateY(0)';
   setTimeout(function() {
-    document.body.style.overflowY = 'auto';
-  }, 2000);
+    document.body.classList.remove('m-open');
+  }, 500);
 
-/* Space Here */
+// Space Here 
+
+// Settings Modal
 
   const settings = document.getElementById('settings');
-  const overlay = document.getElementById('modal-overlay');
+const overlay = document.getElementById('modal-overlay');
+const closeBtn = document.querySelector('.close');
 
-  settings.addEventListener('click', () => {
-    overlay.classList.add('active');
-  });
+settings.addEventListener('click', () => {
+  overlay.classList.add('active');
+  document.body.classList.add('m-open');
+});
 
-  var $closebtn = document.querySelector('.close');
-  $closebtn.addEventListener('click', function() {
-    const overlay = document.getElementById('modal-overlay');
+closeBtn.addEventListener('click', () => {
+  overlay.classList.remove('active');
+  document.body.classList.remove('m-open');
+});
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
     overlay.classList.remove('active');
-  });
+    document.body.classList.remove('m-open');
+  }
+});
+
 });

@@ -82,8 +82,8 @@
 .settings-options {
   background-color: rgb(184, 184, 184);
   border-radius: 8px;
-  margin: 2vh 0;
-  padding: 2vh 2vw;
+  margin: 4vh 0;
+  padding: 4vh 2vw;
   display: flex;
   flex-direction: column;
   gap: 1.5vh;
@@ -94,4 +94,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.setting-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.setting-btn:hover {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }

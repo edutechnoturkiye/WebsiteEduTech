@@ -97,24 +97,24 @@ body {
 
 @media (max-width: 600px) {
   .logo {
-    width: 10vw;
-    height: 10vw;
+    width: 11vw;
+    height: 11vw;
   }
 
   .logo:hover {
-    width: 14vw;
-    height: 14vw;
+    width: 15.5vw;
+    height: 15.5vw;
   }
 
   .navbar .settings {
-    width: 5vw;
-    height: 5vw;
-    top: 5%;
+    width: 8vw;
+    height: 8vw;
+    right: 10%;
   }
 
   .navbar .settings:hover {
-    width: 7vw;
-    height: 7vw;
+    width: 8.1vw;
+    height: 8.1vw;
   }
 }
 

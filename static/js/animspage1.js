@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const settings = document.getElementById('settings');
 const overlay = document.getElementById('modal-overlay');
-const closeBtn = document.querySelector('.close');
+const closeBtn = document.querySelector('.close');console.log("Debug Mode Disabled")
 
 settings.addEventListener('click', () => {
   overlay.classList.add('active');
